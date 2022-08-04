@@ -198,7 +198,7 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(background1.jpg);
+    background-image: url(logo/background1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -435,7 +435,7 @@ a {
     padding: 12px;
     position: relative;
     cursor: pointer;
-    margin-left: 200px;
+    margin-left: 270px;
     
 }
 
@@ -447,7 +447,7 @@ a {
     right: 15px;
     bottom: 0;
     width: 100%;
-    border: 0.1px dotted var(--text-color)
+    border: 0.1px dotted var(--main-color)
 }
 
 .food-items:hover .food-item p {
@@ -473,7 +473,18 @@ a {
     transform: all 0.3s ease-in;
     font-size: 20px
 }
-
+#addNameMenu{
+    padding: 5px;
+    width: 20%;
+}
+#addPricesMenu {
+    padding: 5px;
+    width: 20%;
+}
+#addImgMenu {
+    padding: 5px;
+    width: 20%;
+}
 .food-price p {
     color: var(--text2-color);
     transform: all 0.3s ease-in;
@@ -491,7 +502,7 @@ a {
 
 /* ---------------bot---------- */
 .bot {
-    background-image: url("background1.jpg");
+    background-image: url("logo/background1.jpg");
     padding-top: 80px;
     background-position: center;
     background-repeat: no-repeat;

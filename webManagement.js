@@ -480,20 +480,6 @@ function checkLogin() {
     let username = document.querySelector(`#userName_2`).value;
     let password = document.querySelector(`#passWord_2`).value;
     let newLogin = new Login(username, password);
-    // for (let i = 0; i <= loginList.length; i++) {
-    //     for (let j = 0; j < loginList[i].length; j++) {
-    //         if (username == loginList[i][j] && password == loginList[i][j + 1]) {
-    //             alert('Đăng Nhập Thành Công!')
-    //             break;
-    //         } else {
-    //             alert('Đăng Nhập Thất Bại Vui Lòng Thử Lại');
-    //             continue;
-
-    //         }
-    //     }
-
-    // }
-
     for (let login of loginList) {
         if (username == login.username && password == login.password) {
             loged = true;
