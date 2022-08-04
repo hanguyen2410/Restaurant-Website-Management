@@ -361,7 +361,7 @@ a {
 
 /* Menu */
 .menu {
-    background-color: #355764;
+    background-color: var(--main-color);
 }
 
 .menu-title {
