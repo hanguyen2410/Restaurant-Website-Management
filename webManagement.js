@@ -17,18 +17,7 @@ window.addEventListener("scroll", function () {
         total.classList.remove("active");
     }
 })
-//Menu
-// let menuTitle = document.querySelector(".menu-title");
-// menuTitle.addEventListener("click",function(x){
-//     if(x.target.classList.contains("menu-button")){
-//         let Target = x.target.getAttribute("data-title");
-//         menuTitle.querySelector(".active").classList.remove("active");
-//         x.target.classList.add("active");
-//         let menuItem = document.querySelector(".menu");
-//         menuItem.querySelector(".menu-item-content.active").classList.remove("active");
-//         menuItem.querySelector(Target).classList.add("active");
-//     }
-// })
+
 function morning() {
     document.querySelector(`#morning`).classList.remove('d-none');
     document.querySelector(`#lunch`).classList.add('d-none');
@@ -447,19 +436,6 @@ function saveBooking(index) {
     document.querySelector(`.edit-booking${index}`).classList.remove("d-none");
 }
 function cancelBooking(index) {
-    // let tr = document.querySelector(`.tr_${index}`);
-    // let oldDate = document.querySelector(`#old-Date${index}`).value;
-    // tr.children[1].innerHTML = oldDate;
-    // let oldName = document.querySelector(`#old-Name${index}`).value;
-    // tr.children[2].innerHTML = oldName;
-    // let oldTime = document.querySelector(`#old-Time${index}`).value;
-    // tr.children[3].innerHTML = oldTime;
-    // let oldPhone = document.querySelector(`#old-Phone${index}`).value;
-    // tr.children[4].innerHTML = oldPhone;
-    // let oldPerson = document.querySelector(`#old-Person${index}`).value;
-    // tr.children[5].innerHTML = oldPerson;
-    // let oldEmail = document.querySelector(`#old-Email${index}`).value;
-    // tr.children[6].innerHTML = oldEmail;
     renderOrderList();
     document.querySelector(`.save-booking${index}`).classList.add("d-none");
     document.querySelector(`.cancel-booking${index}`).classList.add("d-none");
