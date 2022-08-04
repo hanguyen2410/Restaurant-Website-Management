@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Hàng Vững Huế</title>
+    <link rel="stylesheet" href="casesutudy1.css">
+</head>
+
+<body>
+    <section class="total">
+        <div class="container">
+            <div class="row justify-content">
+                <div class="logo"><img src="logo2.png"></div>
+                <div class="menu-bar">
+                    <span></span>
+                </div>
+                <div class="menu-items">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="#main">Trang Chủ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href='#information'>Giới Thiệu</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#sectionMenu">Đặc Sản</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#sectionMenu">Thực Đơn</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://www.quangbinhtravel.vn/mot-so-hinh-anh-phong-nha-ke-bang-dep.html">Hình Ảnh</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://oxalisadventure.com/vi/nhung-dia-diem-vui-choi-trong-ngay-khi-den-phongnha-quangbinh/">Điểm Đến</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#contact">Liên Hệ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a onclick="openLogin()" id="open-login">Đăng Nhập</a>
+                        </li>
+                        <li class="menu-item">
+                            <p class="d-none" id="userName_1">Username:</p>
+                            <input type="text" id="userName_2" class="user-name d-none" placeholder="Vui lòng nhập username">
+                        </li>
+                        <li class="menu-item">
+                            <p class="d-none" id="passWord_1">Password:</p>
+                            <input type="password" id="passWord_2" class="passWord d-none" placeholder="Vui lòng nhập password">
+                        </li>
+                        <li class="menu-item">
+                            <button class="order btn d-none" id="btn-checklogin" onclick="checkLogin()" >Đăng Nhập</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="center" id="main">
+        <div class="center-content">
+            <h2>Nhà Hàng Vững Huế</h2>
+            <h2>Kính Chào Quý Khách</h2>
+            <p>Lựa chọn tốt nhất cho những bữa ăn</p>
+            <button class="order btn" id="order-center" onclick="location.href='#sectionOrder'">Đặt Bàn</button>
+        </div>
+    </section>
+    <section class="mid section-pading" id="information">
+        <div class="container">
+            <div class="row">
+                <div class="section-title-mid">
+                    <h2 data-title="Câu Chuyện">Về Chúng Tôi</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mid-item">
+                    <h2>CHÀO MỪNG CÁC BẠN ĐẾN VỚI NHÀ HÀNG VỮNG HUẾ</h2>
+                    <h3>ẨM THỰC PHONG NHA - QUẢNG BÌNH</h3>
+                    <p>Trước hết xin được thay mặt cho đội ngũ nhân viên Nhà hàng Vững Huế, kính chúc Quý khách luôn
+                        được dồi dào sức khỏe và gặt hái được nhiều thành công trong cuộc sống.</p>
+                     <p>Với mô hình hoạt động suốt 15 năm trong lĩnh vực kinh doanh nhà hàng tại địa chỉ Phong Nha – Sơn
+                        Trạch - Bố Trạch - Quảng Bình.</p>   
+                       <p>Nhà hàng Vững Huế, từ lâu đã trở thành nơi nghỉ chân lý tưởng của quý khách mỗi lần đến thăm
+                        quan di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng và động Thiên Đường.</p> 
+                    <button class="btn-midmenu" onclick="location.href='#sectionMenu'">
+                        XEM MENU
+                    </button>
+                </div>
+                <div class="mid-item">
+                    <div class="mid-item-img">
+                        <span>Hơn 20 năm kinh nghiệm</span>
+                        <img src="img2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="menu section-pading" id="sectionMenu">
+        <div class="container">
+            <div class="row">
+                <div class="section-title-menu">
+                    <h2 data-title="Order Now">Menu</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu-title">
+                    <button class="menu-button" onclick="morning()">Sáng</button>
+                    <button class="menu-button" onclick="lunch()">Trưa</button>
+                    <button class="menu-button" onclick="night()">Tối</button>
+                    <button class="menu-button" onclick="drink()">Đồ Uống</button>
+                </div>
+                <div class="menu-title">
+                    <p class="d-none" id="foodName">Tên Món Ăn</p>
+                    <input type="text" name="" id="addNameMenu" placeholder="Tên Món Ăn" class="d-none">
+                    <p class="d-none" id="priceName">Giá Tiền</p>
+                    <input type="text" name="" id="addPricesMenu" placeholder="Giá Tiền" class="d-none">
+                    <p class="d-none" id="imagesName">Hình Ảnh</p>
+                    <input type="url" name="" id="addImgMenu" placeholder="Ảnh Menu" class="d-none">
+                </div>
+                <div class="menu-title">
+                    <button class="btn-menu d-none" onclick="addMorning()" id="addMorning">
+                        Add Morning
+                    </button>
+                    <button class="btn-menu d-none" onclick="addLunch()" id="addLunch">
+                        Add Lunch
+                    </button>
+                    <button class="btn-menu d-none" onclick="addNight()" id="addNight">
+                        Add Night
+                    </button>
+                    <button class="btn-menu d-none" onclick="addDrink()" id="addDrink">
+                        Add Drinks
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content">
+               <div class="menu-item-content " id="morning">
+                     
+                </div>
+                <div class="menu-item-content d-none" id="lunch">
+                    
+                </div>
+                <div class="menu-item-content d-none" id="night">
+                    
+                </div>
+                <div class="menu-item-content d-none" id="drink">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="order justify-content" id="sectionOrder">
+        <div class="container">
+            <div class="row">
+                <div class="section-title-order">
+                    <h2 data-title="Reservation">Đặt Bàn Tại Nhà Hàng Vững Huế</h2>
+                </div>
+                <div class="order-section" style="display: flex;">
+                    <div class="show-item">
+                        <table class="tb-order">
+                            <tbody>
+                                <tr>
+                                    <th>Ngày</th>
+                                    <th>Tên Bạn</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" onkeypress="pressEnter(event)" name="" id="dateOrder"></td>
+                                    <td><input type="text" onkeypress="pressEnter(event)" name="" id="nameOrder" placeholder="Name"></td>
+
+                                </tr>
+                                <tr>
+                                    <th>Giờ</th>
+                                    <th>Điện Thoại</th>
+
+                                </tr>
+                                <tr>
+                                    <td><input type="time" onkeypress="pressEnter(event)"  name="" id="timeOrder"></td>
+                                    <td><input type="number" onkeypress="pressEnter(event)" name="" id="phoneOrder" placeholder="Phone"></td>
+                                </tr>
+                                <tr>
+                                    <th>Số người</th>
+                                    <th>Email</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="" onkeypress="pressEnter(event)" id="personOrder" placeholder="Số Người Trong Đoàn"></td>
+                                    <td><input type="text" name="" onkeypress="pressEnter(event)" id="emailOrder" placeholder="Email"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><button class="btn-order" onclick="orderButton()">Đặt Bàn</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="order-item">
+                        <div class="order-item-img">
+                            <img src="anhorder.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bot" id="contact">
+        <div class="container">
+            <div class="row justify-content">
+                <div class="bot-item">
+                    <h2>Địa Chỉ</h2>
+                    <p>Thị Trấn Phong Nha<br>Sơn Trạch, Bố Trạch<br>Quảng Bình</p>
+                </div>
+                <div class="bot-item">
+                    <h2>Giờ Mở Cửa</h2>
+                    <p>Từ 7:00 - 23:00 <br>Hằng Ngày</p>
+                </div>
+                <div class="bot-item">
+                    <h2>Liên Hệ</h2>
+                    <p>Phone : 0942071656 - 0984119838<br>Email: vunghuerestaurant@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="checkOrder d-none">
+        <div class="container1">
+            <div class="row justify-content">
+                <div id="table-booking">
+                    <table border="1" class="tb-order1">
+                        <thead>
+                            <div class="section-title-mid">
+                            <h2 data-title="Order List">Nhà Hàng Vững Huế</h2>
+                        </div>
+                        <tr>
+                            <th class="th-order">Số Thứ Tự</th>
+                            <th class="th-order">Ngày</th>
+                            <th class="th-order">Tên</th>
+                            <th class="th-order">Giờ</th>
+                            <th class="th-order">Phone</th>
+                            <th class="th-order">Số Người</th>
+                            <th class="th-order">Email</th>
+                            <th class="th-order">XXX</th>
+                        </tr>
+                        </thead>
+                    <tbody class="tboy-order">
+                        
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="casestudy1.js"></script>
+
+</html>
