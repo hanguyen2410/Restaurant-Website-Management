@@ -268,9 +268,9 @@ function addMorning(index) {
         alert('Input is required?')
         return
     }
-    menu_Morning.foodsMorning.push(foodAddName);
-    menu_Morning.imagesMorning.push(priceAddName);
-    menu_Morning.pricesMorning.push(imageAddName);
+    menu_Morning.foodsMorning.unshift(foodAddName);
+    menu_Morning.imagesMorning.unshift(priceAddName);
+    menu_Morning.pricesMorning.unshift(imageAddName);
     setData(key_MenuMorning, menu_Morning);
     renderMorningFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -285,9 +285,9 @@ function addLunch(index) {
         alert('Input is required?')
         return
     }
-    menu_Lunch.foodsLunch.push(foodAddName);
-    menu_Lunch.imagesLunch.push(priceAddName);
-    menu_Lunch.pricesLunch.push(imageAddName);
+    menu_Lunch.foodsLunch.unshift(foodAddName);
+    menu_Lunch.imagesLunch.unshift(priceAddName);
+    menu_Lunch.pricesLunch.unshift(imageAddName);
     setData(key_MenuLunch, menu_Lunch);
     renderLunchFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -302,9 +302,9 @@ function addNight(index) {
         alert('Input is required?')
         return
     }
-    menu_Night.foodsNight.push(foodAddName);
-    menu_Night.imagesNight.push(priceAddName);
-    menu_Night.pricesNight.push(imageAddName);
+    menu_Night.foodsNight.unshift(foodAddName);
+    menu_Night.imagesNight.unshift(priceAddName);
+    menu_Night.pricesNight.unshift(imageAddName);
     setData(key_MenuNight, menu_Night);
     renderNightFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -320,9 +320,9 @@ function addDrink(index) {
         return
     }
 
-    menu_Drink.drinks.push(foodAddName);
-    menu_Drink.imagesDrink.push(priceAddName);
-    menu_Drink.pricesDrink.push(imageAddName);
+    menu_Drink.drinks.unshift(foodAddName);
+    menu_Drink.imagesDrink.unshift(priceAddName);
+    menu_Drink.pricesDrink.unshift(imageAddName);
     setData(key_MenuDrink, menu_Drink);
     renderDrink();
     document.querySelector(`#addNameMenu`).value = null;
@@ -352,7 +352,7 @@ function orderButton() {
         return
     }
     let newBooking = new orderName(day, name, time, phone, person, email);
-    orderList.push(newBooking);
+    orderList.unshift(newBooking);
     setData(key_order, orderList);
     document.querySelector(`#dateOrder`).value = null;
     document.querySelector(`#nameOrder`).value = null;
