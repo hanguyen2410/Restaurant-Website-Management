@@ -119,11 +119,12 @@ a {
 
 .total .menu-bar.active span::after {
     transform: rotate(135deg);
-
 }
+
 #btn-checklogin {
     margin: 8px;
 }
+
 #open-login {
     cursor: pointer;
 }
@@ -171,9 +172,11 @@ a {
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
 }
+
 .menu-item input {
     padding: 5px;
 }
+
 .menu-items a {
     color: var(--text-color);
     line-height: 40px;
@@ -186,7 +189,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -327,12 +330,13 @@ a {
     display: block;
     width: 100px;
     height: 100px;
-    border: 3px solid var(--main-color);
+    border: 3px solid var(--sub-color);
     position: absolute;
     top: calc(50% - 50px);
     left: calc(50% - 50px);
     animation: turnARound 5s infinite;
 }
+
 .btn-midmenu {
     background-color: transparent;
     padding: 15px 30px;
@@ -368,6 +372,7 @@ a {
     width: 100%;
     text-align: center;
 }
+
 .menu-title p {
     color: var(--text-color);
     width: 100%;
@@ -390,6 +395,7 @@ a {
 .btn-menu:hover {
     background-color: var(--sub-color);
 }
+
 .section-title-menu {
     width: 100%;
     text-align: center;
@@ -436,7 +442,7 @@ a {
     position: relative;
     cursor: pointer;
     margin-left: 270px;
-    
+
 }
 
 .food-items::before {
@@ -473,18 +479,22 @@ a {
     transform: all 0.3s ease-in;
     font-size: 20px
 }
-#addNameMenu{
+
+#addNameMenu {
     padding: 5px;
     width: 20%;
 }
+
 #addPricesMenu {
     padding: 5px;
     width: 20%;
 }
+
 #addImgMenu {
     padding: 5px;
     width: 20%;
 }
+
 .food-price p {
     color: var(--text2-color);
     transform: all 0.3s ease-in;
@@ -496,6 +506,7 @@ a {
     flex-wrap: wrap;
     width: 100%;
 }
+
 .d-none {
     display: none;
 }
@@ -535,6 +546,7 @@ a {
     color: var(--text2-color);
     margin: 12px;
 }
+
 /* Oder */
 .order {
     background-color: #E2DCC8;
@@ -548,7 +560,9 @@ a {
     color: var(--main-color);
     cursor: pointer;
     transition: all 0.4s ease;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
 }
 
 .btn-order:hover {
@@ -576,45 +590,85 @@ a {
     font-size: 30px;
     font-family: 'Dancing Script', cursive;
 }
-.tb-order tbody tr td > input {
+.tb-order {
+    margin-left: 100px;
+    margin-top: 5px
+}
+
+.tb-order tbody tr td>input {
     padding: 15px;
     width: 250px;
-    
+
 }
+
 .order-item tbody tr {
     text-align: center;
-    
+
 }
+
 .order .order-item img {
-    width: 80%;
+    width: 60%;
     border-radius: 10px;
-    margin: 30px;
+    margin-left: 280px;
+    
+
+}
+.show-order {
+    margin: 27px;
+    display: block;
+}
+.show-order thead th {
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Dancing Script';
+    text-align: center;
+    width: 300px;
+}
+.show-order tbody td {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+.show-order tr td:hover {
+    background-color: var(--sub-color);
+    color: var(--text-color);
+}
+
+.th-show:hover {
+    background-color: var(--sub-color);
+    color: var(--text-color);
 }
 /* Checkorder */
 .checkOrder {
-background-color: var(--sub-color);
+    background-color: var(--sub-color);
+
 }
-.container1{
+
+.container1 {
     margin-left: 80px;
 }
+
 .tb-order1 {
     padding: 15px;
     border: 1px;
     width: 100%;
     color: var(--text2-color);
 }
+
 .tb-order1 thead h1 {
     color: var(--text2-color);
     font-size: 35px;
     text-align: center;
     margin-bottom: 15px;
 }
+
 .tb-order1 thead tr th {
     padding: 40px;
     font-size: 25px;
     font-family: 'Dancing Script';
 
 }
+
 .tb-order1 tbody tr td {
     padding: 15px;
     font-size: 20px;
@@ -625,6 +679,7 @@ background-color: var(--sub-color);
     width: 100%;
     display: flex;
 }
+
 .btn-booking {
     background-color: transparent;
     padding: 12px 20px;
@@ -635,18 +690,21 @@ background-color: var(--sub-color);
     transition: all 0.4s ease;
     margin-top: 15px;
 }
+
 .btn-booking:hover {
     color: var(--text-color);
     background-color: var(--sub-color);
 
 }
+
 .tboy-order tr td input {
-font-size: 15px;
-padding: 10px 8px;
-background-color: var(--text-color);
-font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 10px 8px;
+    background-color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
 
 }
+
 .tboy-order tr td:hover {
     background-color: var(--main-color);
 }

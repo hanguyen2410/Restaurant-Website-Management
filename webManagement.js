@@ -329,7 +329,18 @@ function addDrink(index) {
     document.querySelector(`#addPricesMenu`).value = null;
     document.querySelector(`#addImgMenu`).value = null;
 }
+// change day
+function formatDateVN(dateString) {
+    var subDateStr = dateString.split("-");
+    let b = new Array(3);
+    b[0] = subDateStr[2];
+    b[1] = subDateStr[1];
+ 	b[2] = subDateStr[0];
+    b.join('/');
+    return b.join('/');
+}
 
+// order booking
 function orderName(day, name, time, phone, person, email) {
     this.day = day;
     this.name = name;
@@ -341,7 +352,7 @@ function orderName(day, name, time, phone, person, email) {
 
 function orderButton() {
 
-    let day = document.querySelector(`#dateOrder`).value;
+    let day = formatDateVN(document.querySelector(`#dateOrder`).value);
     let name = document.querySelector(`#nameOrder`).value;
     let time = document.querySelector(`#timeOrder`).value;
     let phone = document.querySelector(`#phoneOrder`).value;
@@ -352,8 +363,9 @@ function orderButton() {
         return
     }
     let newBooking = new orderName(day, name, time, phone, person, email);
-    orderList.unshift(newBooking);
+    orderList.push(newBooking);
     setData(key_order, orderList);
+    alert('Bạn Đã Đặt Bàn Thành Công, Cám Ơn Bạn!!!')
     document.querySelector(`#dateOrder`).value = null;
     document.querySelector(`#nameOrder`).value = null;
     document.querySelector(`#timeOrder`).value = null;
@@ -361,9 +373,21 @@ function orderButton() {
     document.querySelector(`#personOrder`).value = null;
     document.querySelector(`#emailOrder`).value = null;
     renderOrderList();
-
+    renderOrderBooking();
 }
-
+function renderOrderBooking(){
+    let htmls = "";
+    for (let [index, showbooking] of orderList.entries()){
+        htmls += `
+        <tr class="tr_${index}">
+            <td>${index + 1}</td>
+            <td>${showbooking.day}</td>
+            <td>${showbooking.name}</td>
+        </tr>
+        `
+    }
+    document.querySelector('.show-order1').innerHTML = htmls;
+}
 function renderOrderList() {
     let htmls = "";
     for (let [index, booking] of orderList.entries()) {
@@ -538,6 +562,7 @@ function init() {
 
 function mainBooking() {
     init();
+    renderOrderBooking();
     renderOrderList();
 }
 mainBooking();
