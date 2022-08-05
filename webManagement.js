@@ -377,12 +377,12 @@ function orderButton() {
 }
 function renderOrderBooking(){
     let htmls = "";
-    for (let [index, showbooking] of orderList.entries()){
+    for (let [index, booking] of orderList.entries()){
         htmls += `
-        <tr class="tr_${index}">
+        <tr class="tr">
             <td>${index + 1}</td>
-            <td>${showbooking.day}</td>
-            <td>${showbooking.name}</td>
+            <td>${booking.day}</td>
+            <td>${booking.name}</td>
         </tr>
         `
     }
@@ -417,6 +417,7 @@ function removeBooking(index) {
         orderList.splice(index, 1);
         setData(key_order, orderList);
         renderOrderList();
+        renderOrderBooking();
     }
 }
 function editBooking(index) {
@@ -455,6 +456,7 @@ function saveBooking(index) {
     tr.children[6].innerHTML = newEmail;
     orderList[index] = new orderName(newDate, newName, newTime, newPhone, newPerson, newEmail)
     setData(key_order, orderList);
+    renderOrderBooking();
     document.querySelector(`.save-booking${index}`).classList.add("d-none");
     document.querySelector(`.cancel-booking${index}`).classList.add("d-none");
     document.querySelector(`.edit-booking${index}`).classList.remove("d-none");
