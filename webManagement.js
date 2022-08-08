@@ -43,8 +43,8 @@ function drink() {
     document.querySelector(`#drink`).classList.remove('d-none');
 }
 let foodsMorning = ['Bánh Mì Xíu Mại', 'Bún Bò Huế', 'Phở Bò', 'Xôi Gà', 'Bánh Cuốn Hà Nội', 'Bún Hến', 'Mì Tôm Hến', 'Cháo Gà']
-let imagesMorning = ['ansang/ansang1.jpg', 'ansang/ansang2.jpg', 'ansang/ansang3.jpg', 'ansang/ansang4.jpg', 'ansang/ansang5.jpg', 'ansang/ansang6.jpg', 'ansang/ansang7.jpg', 'ansang/ansang8.jpg']
 let pricesMorning = ['15.000 VNĐ', '25.000 VNĐ', '25.000 VNĐ', '25.000 VNĐ', '20.000 VNĐ', '10.000 VNĐ', '10.000 VNĐ', '20.000 VNĐ']
+let imagesMorning = ['ansang/ansang1.jpg', 'ansang/ansang2.jpg', 'ansang/ansang3.jpg', 'ansang/ansang4.jpg', 'ansang/ansang5.jpg', 'ansang/ansang6.jpg', 'ansang/ansang7.jpg', 'ansang/ansang8.jpg']
 var menu_Morning = {
     foodsMorning: foodsMorning,
     imagesMorning: imagesMorning,
@@ -269,8 +269,8 @@ function addMorning(index) {
         return
     }
     menu_Morning.foodsMorning.unshift(foodAddName);
-    menu_Morning.imagesMorning.unshift(priceAddName);
-    menu_Morning.pricesMorning.unshift(imageAddName);
+    menu_Morning.pricesMorning.unshift(priceAddName);
+    menu_Morning.imagesMorning.unshift(imageAddName);
     setData(key_MenuMorning, menu_Morning);
     renderMorningFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -286,8 +286,8 @@ function addLunch(index) {
         return
     }
     menu_Lunch.foodsLunch.unshift(foodAddName);
-    menu_Lunch.imagesLunch.unshift(priceAddName);
-    menu_Lunch.pricesLunch.unshift(imageAddName);
+    menu_Lunch.imagesLunch.unshift(imageAddName);
+    menu_Lunch.pricesLunch.unshift(priceAddName);
     setData(key_MenuLunch, menu_Lunch);
     renderLunchFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -303,8 +303,8 @@ function addNight(index) {
         return
     }
     menu_Night.foodsNight.unshift(foodAddName);
-    menu_Night.imagesNight.unshift(priceAddName);
-    menu_Night.pricesNight.unshift(imageAddName);
+    menu_Night.imagesNight.unshift(imageAddName);
+    menu_Night.pricesNight.unshift(priceAddName);
     setData(key_MenuNight, menu_Night);
     renderNightFoods();
     document.querySelector(`#addNameMenu`).value = null;
@@ -321,8 +321,8 @@ function addDrink(index) {
     }
 
     menu_Drink.drinks.unshift(foodAddName);
-    menu_Drink.imagesDrink.unshift(priceAddName);
-    menu_Drink.pricesDrink.unshift(imageAddName);
+    menu_Drink.imagesDrink.unshift(imageAddName);
+    menu_Drink.pricesDrink.unshift(priceAddName);
     setData(key_MenuDrink, menu_Drink);
     renderDrink();
     document.querySelector(`#addNameMenu`).value = null;
